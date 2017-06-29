@@ -1,0 +1,7 @@
+其他项目使用该框架的注意事项
+
+1.com.salt.api.reportmanage.db下的所有类都需要复制迁移
+2.MybatisConfiguration.java上有个@MapperScan("com.salt.api.reportmanage.dao")，需要根据实际请修改
+3.JerseyApplication 添加jerseyServlet()方法，里面有个url，根据实际情况修改,比如/1.0/*,则实际请求时http://localhost/1.0/monthreport/xxx这样了
+4.application.yml中的mybatis开头那几个参数，也要修改
+5.jdk必须是1.8
